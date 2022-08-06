@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--Firebase Libraries-->
+    <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-database.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: 'AIzaSyBXV8PvMVWK3Z22WChFKhrfpZs6Pq9VMNs',
+        authDomain: 'final-project-1df96.firebaseapp.com',
+        databaseURL: 'https://final-project-1df96-default-rtdb.firebaseio.com',
+        projectId: 'final-project-1df96',
+        storageBucket: 'final-project-1df96.appspot.com',
+        messagingSenderId: '209914854671',
+        appId: '1:209914854671:web:235658758c8156536b527a',
+        measurementId: 'G-Z3EDK4JNL1',
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+  </body>
+</html>
