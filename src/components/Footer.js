@@ -1,4 +1,12 @@
-import { Facebook, Instagram, Twitter } from '@mui/icons-material';
+import {
+  Email,
+  Facebook,
+  Fax,
+  Instagram,
+  LocationCity,
+  PhoneIphone,
+  Twitter,
+} from '@mui/icons-material';
 import React from 'react';
 import styled from 'styled-components';
 const Container = styled.div`
@@ -8,23 +16,18 @@ const Left = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-`;
-const Center = styled.div`
-  flex: 1;
-  paddin: 20px;
-`;
-const Right = styled.div`
-  flex: 1;
-  padding: 20px;
+  padding: 15px;
 `;
 const Logo = styled.h1``;
-const SocialMediaContainer = styled.div`
+const Description = styled.p`
+  margin: 20px 0px;
+`;
+const MediaContainer = styled.div`
   display: flex;
 `;
 const MediaAppIcon = styled.div`
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   color: white;
   background-color: #${(props) => props.color};
@@ -33,37 +36,48 @@ const MediaAppIcon = styled.div`
   justify-content: center;
   margin-right: 20px;
 `;
-const Description = styled.p`
-  margin: 14px 0px;
+
+const Center = styled.div`
+  flex: 1;
+  paddig: 20px;
 `;
-const Title = styled.h1`
-  margin-bottom: 20px;
+const Title = styled.h2`
+  margin-bottom: 30px;
 `;
 const List = styled.ul`
   margin: 0;
-  padding: 0;
+  paddin: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
 `;
-const ListItem = styled.li`
-  width: 50%;
-  margin-bottom: 6px;
+const ListItems = styled.li`
+  width: 40%;
+  margin-bottom: 10px;
 `;
-const ContactItem = styled.dv``;
+
+const Right = styled.div`
+  flex: 1;
+  padding: 20px;
+`;
+const ContactItem = styled.div`
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+`;
+const Payment = styled.img``;
 
 const Footer = () => {
   return (
     <Container>
       <Left>
-        <Logo>SNEAKY</Logo>
+        <Logo>Sneaky</Logo>
         <Description>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam,
-          debitis sint magnam velit amet voluptate, accusamus, fugit esse
-          temporibus cupiditate similique? Praesentium consectetur quisquam
-          excepturi beatae? Deserunt maiores reprehenderit veritatis.
+          You can always count on Sneaky for the best products and services ,
+          this is some dummy text tbh.Lets not focus more then we should on this
+          description.Peace out.
         </Description>
-        <SocialMediaContainer>
+        <MediaContainer>
           <MediaAppIcon color="3B5999">
             <Facebook />
           </MediaAppIcon>
@@ -73,19 +87,36 @@ const Footer = () => {
           <MediaAppIcon color="55ACEE">
             <Twitter />
           </MediaAppIcon>
-        </SocialMediaContainer>
+        </MediaContainer>
       </Left>
       <Center>
-        <Title>Useful Links</Title>
+        <Title>Jump Around the Page</Title>
         <List>
-          <ListItem>Home</ListItem>
-          <ListItem>Cart</ListItem>
-          <ListItem>My Account</ListItem>
-          <ListItem>Wishlist</ListItem>
-          <ListItem>Terms</ListItem>
-          <ListItem>Terms</ListItem>
+          <ListItems>Home</ListItems>
+          <ListItems>Home</ListItems>
+          <ListItems>Home</ListItems>
+          <ListItems>Home</ListItems>
+          <ListItems>Home</ListItems>
+          <ListItems>Home</ListItems>
         </List>
       </Center>
+      <Right>
+        <Title>Contacts</Title>
+        <ContactItem>
+          <LocationCity /> Location Str.33
+        </ContactItem>
+        <ContactItem>
+          <PhoneIphone /> 0743123123
+        </ContactItem>
+        <ContactItem>
+          <Email /> sneaky@yahoo.com
+        </ContactItem>
+        <ContactItem>
+          <Fax />
+          fax@sneaky000
+        </ContactItem>
+        <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
+      </Right>
     </Container>
   );
 };
