@@ -7,7 +7,7 @@ const Container = styled.div`
   height: 60px;
 `;
 const Language = styled.span`
-  font-size: 14px;
+  font-size: 20px;
   cursor: pointer;
 `;
 const Wrapper = styled.div`
