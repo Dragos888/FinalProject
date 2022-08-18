@@ -2,7 +2,7 @@ import { Send } from '@mui/icons-material';
 import React from 'react';
 import styled from 'styled-components';
 const Container = styled.div`
-  height: 30vh;
+  height: 20vh;
   background-color: #edd0d5;
   display: flex;
   align-items: center;
@@ -10,7 +10,7 @@ const Container = styled.div`
   flex-direction: column;
 `;
 const Title = styled.h1`
-  font-size: 60px;
+  font-size: 30px;
   margin-bottom: 20px;
 `;
 const Description = styled.div`

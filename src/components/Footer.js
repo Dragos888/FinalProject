@@ -90,7 +90,7 @@ const Footer = () => {
         </MediaContainer>
       </Left>
       <Center>
-        <Title>Jump Around the Page</Title>
+        <Title>Jump Around in Page</Title>
         <List>
           <ListItems>Home</ListItems>
           <ListItems>Home</ListItems>
@@ -103,16 +103,16 @@ const Footer = () => {
       <Right>
         <Title>Contacts</Title>
         <ContactItem>
-          <LocationCity /> Location Str.33
+          <LocationCity style={{ marginRight: '10px' }} /> Location Str.33
         </ContactItem>
         <ContactItem>
-          <PhoneIphone /> 0743123123
+          <PhoneIphone style={{ marginRight: '10px' }} /> 0743123123
         </ContactItem>
         <ContactItem>
-          <Email /> sneaky@yahoo.com
+          <Email style={{ marginRight: '10px' }} /> sneaky@yahoo.com
         </ContactItem>
         <ContactItem>
-          <Fax />
+          <Fax style={{ marginRight: '10px' }} />
           fax@sneaky000
         </ContactItem>
         <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />

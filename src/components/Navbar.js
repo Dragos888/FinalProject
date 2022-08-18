@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
-  aligns-itmes: center;
+  align-items: center;
 `;
 const Left = styled.div`
   flex: 1;
@@ -23,6 +23,10 @@ const Left = styled.div`
 `;
 const Center = styled.div`
   flex: 1;
+  text-align: center;
+`;
+const Logo = styled.h1`
+  font-weight: bold;
 `;
 const Right = styled.div`
   flex: 1;
@@ -30,15 +34,13 @@ const Right = styled.div`
   align-items: center;
   justify-content: flex-end;
 `;
-const Logo = styled.h1`
-  font-weight: bold;
-`;
 const SearchContainer = styled.div`
   border-radius: 1px solid lightgray;
   display: flex;
   aling-items: center;
   margin-left: 25px;
   padding: 5px;
+  cursor: pointer;
 `;
 const Input = styled.input``;
 const Menu = styled.div`
@@ -59,17 +61,17 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo /> UP
+          <Logo />
+          SNEAKY
         </Center>
         <Right>
-          <Menu />
-          Register
-          <Menu />
-          Sing in
-          <Menu />
-          <Badge badgeContent={4} color="primary">
-            <ShoppingCart />
-          </Badge>
+          <Menu>Register</Menu>
+          <Menu>Sing in</Menu>
+          <Menu>
+            <Badge badgeContent={4} color="primary">
+              <ShoppingCart />
+            </Badge>
+          </Menu>
         </Right>
       </Wrapper>
     </Container>
