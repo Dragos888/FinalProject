@@ -4,10 +4,12 @@ import NavBar from '../components/Navbar';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import { Add, Remove } from '@mui/icons-material';
+import { mobile } from '../Responsive';
 
 const Container = styled.div``;
 const Wrapper = styled.div`
   padding: 20px;
+  ${mobile({ padding: '10px' })}
 `;
 const Title = styled.h1`
   font-weight: 300;
@@ -34,6 +36,7 @@ const TopButton = styled.button`
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({ flexDirection: 'column' })}
 `;
 const Info = styled.div`
   flex: 3;
@@ -42,6 +45,7 @@ const Info = styled.div`
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({ flexDirection: 'column' })}
 `;
 
 const ProductDetail = styled.div`
@@ -109,6 +113,7 @@ const Button = styled.button`
 
 const TopTexts = styled.div`
   display: flex;
+  ${mobile({ display: 'none' })}
 `;
 
 const TopText = styled.span`
@@ -126,11 +131,13 @@ const ProductQuantityContainer = styled.div`
 const ProductQuantity = styled.div`
   font-size: 20px;
   margin: 5px;
+  ${mobile({ margin: '5px 15px' })}
 `;
 
 const ProductPrice = styled.div`
   font-size: 20px;
   font-weight: 200px;
+  ${mobile({ marginBottom: '20px' })}
 `;
 
 const Hr = styled.hr`

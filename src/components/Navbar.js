@@ -1,52 +1,69 @@
+import { Search, ShoppingCartOutlined } from '@mui/icons-material';
+import { Badge } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
-import { Search, ShoppingCart } from '@mui/icons-material';
-import { Badge } from '@mui/material';
+import { mobile } from '../Responsive';
 
 const Container = styled.div`
   height: 60px;
+  ${mobile({ height: '50px' })}
 `;
-const Language = styled.span`
-  font-size: 20px;
-  cursor: pointer;
-`;
+
 const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  ${mobile({ padding: '10px 0px' })}
 `;
+
 const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
 `;
+
+const Language = styled.span`
+  font-size: 14px;
+  cursor: pointer;
+  ${mobile({ display: 'none' })}
+`;
+
+const SearchContainer = styled.div`
+  border: 0.5px solid lightgray;
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  padding: 5px;
+`;
+
+const Input = styled.input`
+  border: none;
+  ${mobile({ width: '50px' })}
+`;
+
 const Center = styled.div`
   flex: 1;
   text-align: center;
 `;
+
 const Logo = styled.h1`
   font-weight: bold;
+  ${mobile({ fontSize: '20px' })}
 `;
 const Right = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  ${mobile({ flex: 2, justifyContent: 'center' })}
 `;
-const SearchContainer = styled.div`
-  border-radius: 1px solid lightgray;
-  display: flex;
-  aling-items: center;
-  margin-left: 25px;
-  padding: 5px;
-  cursor: pointer;
-`;
-const Input = styled.input``;
-const Menu = styled.div`
+
+const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
+  ${mobile({ fontSize: '10px', marginLeft: '10px' })}
 `;
 
 const Navbar = () => {
@@ -54,24 +71,23 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Left>
-          <Language>Ro</Language>
+          <Language>EN</Language>
           <SearchContainer>
-            <Input />
-            <Search />
+            <Input placeholder="Search" />
+            <Search style={{ color: 'gray', fontSize: 16 }} />
           </SearchContainer>
         </Left>
         <Center>
-          <Logo />
-          SNEAKY
+          <Logo>SNEAKY</Logo>
         </Center>
         <Right>
-          <Menu>Register</Menu>
-          <Menu>Sing in</Menu>
-          <Menu>
-            <Badge badgeContent={4} color="primary">
-              <ShoppingCart />
+          <MenuItem>REGISTER</MenuItem>
+          <MenuItem>SIGN IN</MenuItem>
+          <MenuItem>
+            <Badge color="primary">
+              <ShoppingCartOutlined />
             </Badge>
-          </Menu>
+          </MenuItem>
         </Right>
       </Wrapper>
     </Container>
