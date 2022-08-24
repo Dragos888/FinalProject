@@ -1,30 +1,21 @@
-import Header from './components/Header';
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import Auth from './components/Auth';
-import Blogs from './components/Blogs';
-import UserBlogs from './components/UserBlogs';
-import BlogDetail from './components/BlogDetail';
-import AddBlog from './components/AddBlog';
-import { useSelector } from 'react-redux';
+import Banner from './components/banner/Banner';
+import HomePage from './pages/home/HomePage';
+import Login from './pages/login/Login';
+import Register from './pages/register/Register';
+import Settings from './pages/settings/Settings';
+import Single from './pages/single/Single';
+import Write from './pages/write/Write';
+import { BrowserRouter, Routes, Route, Link, Router } from 'react-router-dom';
+
 function App() {
-  const isLoggedIn = useSelector((state) => state.isLoggedIn);
-  console.log(isLoggedIn);
+  const currentUser = true;
   return (
-    <>
-      <header>
-        <Header></Header>
-      </header>
-      <main>
-        <Routes>
-          <Route path="/auth" element={<Auth />} />
-          <Route path="/blogs" element={<Blogs />} />
-          <Route path="/blogs/add" element={<AddBlog />} />
-          <Route path="/myBlogs" element={<UserBlogs />} />
-          <Route path="/myBlogs/:id" element={<BlogDetail />} />
-        </Routes>
-      </main>
-    </>
+    <BrowserRouter>
+      <Banner />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
