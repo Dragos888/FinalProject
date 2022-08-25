@@ -24,13 +24,13 @@ export default function Write() {
         <div className="writeFormGroup">
           <textarea
             className="writeInput writeText"
-            placeholder="Tell your story..."
+            placeholder="Explain your meme"
             type="text"
             autoFocus={true}
           />
         </div>
         <button className="writeSubmit" type="submit">
-          Publish
+          Let`s laugh
         </button>
       </form>
     </div>

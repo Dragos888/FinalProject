@@ -8,12 +8,19 @@ import Write from './pages/write/Write';
 import { BrowserRouter, Routes, Route, Link, Router } from 'react-router-dom';
 
 function App() {
-  const currentUser = true;
+  const user = false;
+
   return (
     <BrowserRouter>
       <Banner />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/register" element={user ? <HomePage /> : <Register />} />
+        <Route path="/login" element={user ? <HomePage /> : <Login />} />
+        <Route path="/write" element={user ? <Write /> : <Register />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/single" element={<Single />} />
+        <Route path="/post/:postId" element={<Single />} />
       </Routes>
     </BrowserRouter>
   );
