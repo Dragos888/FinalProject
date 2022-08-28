@@ -1,5 +1,5 @@
 import './post.css';
-export default function Post() {
+export default function Post({ post }) {
   return (
     <div className="post">
       <img
@@ -12,9 +12,12 @@ export default function Post() {
           <span className="postCat">History</span>
           <span className="postCat">Commedy</span>
         </div>
-        <div className="spanpostTitle">Something else idk</div>
+        <div className="spanpostTitle">{post.title}</div>
         <hr />
-        <span className="postDate">1 hr ago</span>
+        <span className="postDate">
+          {new Date(post.createdAt).toDateString()}
+        </span>
+        <p className="postDesc">{post.desc}</p>
       </div>
     </div>
   );
