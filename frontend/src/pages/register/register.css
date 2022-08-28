@@ -59,3 +59,9 @@
   color: white;
   border-radius: 10px;
 }
+
+.errorText {
+  color: red;
+  margin-top: 10px;
+  font-size: 20px;
+}
