@@ -5,7 +5,7 @@ export default function Write() {
     <div className="write">
       <img
         className="writeImg"
-        src="https://pbs.twimg.com/media/EzRN8VlVUAshCwX.jpg"
+        src="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
         alt=""
       />
       <form className="writeForm">
@@ -13,7 +13,7 @@ export default function Write() {
           <label htmlFor="fileInput">
             <i className="writeIcon fas fa-plus"></i>
           </label>
-          <input id="fileInput" type={'file'} style={{ display: 'none' }} />
+          <input id="fileInput" type="file" style={{ display: 'none' }} />
           <input
             className="writeInput"
             placeholder="Title"
@@ -24,13 +24,13 @@ export default function Write() {
         <div className="writeFormGroup">
           <textarea
             className="writeInput writeText"
-            placeholder="Explain your meme"
+            placeholder="Tell your story..."
             type="text"
             autoFocus={true}
           />
         </div>
         <button className="writeSubmit" type="submit">
-          Let`s laugh
+          Publish
         </button>
       </form>
     </div>

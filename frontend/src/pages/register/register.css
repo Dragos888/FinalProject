@@ -6,9 +6,9 @@
   justify-content: center;
   background: linear-gradient(
       rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.214)
+      rgba(255, 255, 255, 0.5)
     ),
-    url('https://www.meme-arsenal.com/memes/f78aedf5b492377529a6b2ce49a190fe.jpg');
+    url('https://images.pexels.com/photos/335253/pexels-photo-335253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
   background-size: cover;
 }
 
@@ -40,7 +40,7 @@
 .registerButton {
   margin-top: 20px;
   cursor: pointer;
-  background-color: teal;
+  background-color: black;
   color: white;
   padding: 10px;
   border: none;
@@ -52,7 +52,7 @@
   position: absolute;
   top: 60px;
   right: 20px;
-  background-color: lightcoral;
+  background-color: black;
   cursor: pointer;
   padding: 10px;
   border: none;

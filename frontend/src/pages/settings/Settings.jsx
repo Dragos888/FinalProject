@@ -1,6 +1,5 @@
 import './settings.css';
-import Banner from '../../components/banner/Banner';
-import SideBar from '../../components/sidebar/SideBar';
+import Sidebar from '../../components/sidebar/Sidebar';
 
 export default function Settings() {
   return (
@@ -14,7 +13,7 @@ export default function Settings() {
           <label>Profile Picture</label>
           <div className="settingsPP">
             <img
-              src="https://f8n-ipfs-production.imgix.net/QmbGkpDcXbo9SF4YPFnGw8wyU3fRddKzd2rqx8Ep3SqnGN/nft.png?q=80&auto=format%2Ccompress&cs=srgb&max-w=1680&max-h=1680"
+              src="https://i.pinimg.com/originals/ff/f9/51/fff9512609b7279b97750887ff178676.jpg"
               alt=""
             />
             <label htmlFor="fileInput">
@@ -28,9 +27,9 @@ export default function Settings() {
             />
           </div>
           <label>Username</label>
-          <input type="text" placeholder="name" name="name" />
+          <input type="text" placeholder="username" name="name" />
           <label>Email</label>
-          <input type="email" placeholder="email" name="email" />
+          <input type="email" placeholder="user@email.com" name="email" />
           <label>Password</label>
           <input type="password" placeholder="Password" name="password" />
           <button className="settingsSubmitButton" type="submit">
@@ -38,7 +37,7 @@ export default function Settings() {
           </button>
         </form>
       </div>
-      <SideBar />
+      <Sidebar />
     </div>
   );
 }
