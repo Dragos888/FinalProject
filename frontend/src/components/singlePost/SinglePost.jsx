@@ -42,7 +42,7 @@ export default function SinglePost() {
         title,
         desc,
       });
-      window.location.reload();
+      setUpdateMode(false);
     } catch (error) {
       console.log(error);
     }
@@ -63,7 +63,7 @@ export default function SinglePost() {
           />
         ) : (
           <h1 className="singlePostTitle">
-            {post.title}
+            {title}
             {post.username === user?.username && (
               <div className="singlePostEdit">
                 <i
@@ -97,11 +97,13 @@ export default function SinglePost() {
             onChange={(e) => setDesc(e.target.value)}
           />
         ) : (
-          <p className="singlePostDesc">{post.desc}</p>
+          <p className="singlePostDesc">{desc}</p>
         )}
-        <button className="singlePostButton" onClick={handleUpdate}>
-          Update
-        </button>
+        {updateMode && (
+          <button className="singlePostButton" onClick={handleUpdate}>
+            Update
+          </button>
+        )}
       </div>
     </div>
   );
