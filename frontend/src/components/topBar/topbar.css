@@ -40,9 +40,11 @@
 .topList {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
   list-style: none;
+  margin-left: 20px;
 }
 
 .topListItem {
@@ -52,9 +54,20 @@
   cursor: pointer;
 }
 
-.topSearchIcon {
-  font-size: 18px;
-  color: gray;
-  cursor: pointer;
-  margin-left: 12px;
+.topListItem > link {
+  margin: 10px;
+}
+
+@media (max-width: 375px) {
+  .top {
+    width: 700px;
+    height: 50px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    z-index: 999;
+  }
 }

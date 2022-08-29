@@ -46,10 +46,8 @@
 }
 
 .sidebarListItem {
-  display: inline-block;
-  width: 50%;
+  display: flex;
   margin-top: 15px;
-  cursor: pointer;
 }
 
 .sidebarSocial {
@@ -63,4 +61,7 @@
 .sidebarIcon {
   font-size: 16px;
   margin-left: 10px;
+}
+
+@media (max-width: 375px) {
 }

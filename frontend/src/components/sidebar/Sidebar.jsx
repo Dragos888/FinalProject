@@ -1,19 +1,6 @@
-import axios from 'axios';
-import { useEffect } from 'react';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import './sidebar.css';
 
 export default function Sidebar() {
-  const [cats, setCats] = useState([]);
-
-  useEffect(() => {
-    const fetchCats = async () => {
-      const res = await axios.get('/categories');
-      setCats(res.data);
-    };
-    fetchCats();
-  }, []);
   return (
     <div className="sidebar">
       <div className="sidebarItem">
@@ -22,16 +9,15 @@ export default function Sidebar() {
           src="https://googlechrome.github.io/samples/picture-element/images/kitten-small.png"
           alt=""
         />
-        <p>Some text for description indeed</p>
+        <p>purr.purrr..purrr</p>
       </div>
       <div className="sidebarItem">
-        <span className="sidebarTitle">CATEGORIES</span>
+        <span className="sidebarTitle">RULES</span>
         <ul className="sidebarList">
-          {cats.map((c) => (
-            <Link to={`/cat=${c.name}`} className="link">
-              <li className="sidebarListItem">{c.name}</li>
-            </Link>
-          ))}
+          <p className="sidebarListItem">
+            Take a step back, relax and enjoy the articles on this page. Be
+            creative ... Be unique ...
+          </p>
         </ul>
       </div>
       <div className="sidebarItem">

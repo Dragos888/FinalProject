@@ -48,14 +48,17 @@
   text-align: center;
 }
 
-.loginRegisterButton {
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  background-color: black;
-  cursor: pointer;
-  padding: 10px;
-  border: none;
-  color: white;
-  border-radius: 10px;
+@media (max-width: 375px) {
+  .login {
+    width: 700px;
+    height: 1350px;
+  }
+  .loginTitle {
+    height: 300px;
+    font-size: 60px;
+  }
+  .loginForm {
+    width: 90%;
+    height: 90%;
+  }
 }

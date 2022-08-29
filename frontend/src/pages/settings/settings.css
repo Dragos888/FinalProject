@@ -99,3 +99,11 @@
 .settingsSubmitButton:hover {
   background-color: rgb(1, 114, 114);
 }
+
+@media (max-width: 375px) {
+  .settings {
+    display: flex;
+    width: 700px;
+    height: 734px;
+  }
+}

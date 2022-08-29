@@ -43,16 +43,12 @@ export default function TopBar() {
               <Link className="link" to="/login">
                 LOGIN
               </Link>
-              <hr />
-              <hr />
               <Link className="link" to="/register">
                 REGISTER
               </Link>
             </li>
           </ul>
         )}
-
-        <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
       </div>
     </div>
   );
